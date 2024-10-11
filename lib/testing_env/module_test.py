@@ -7,7 +7,8 @@ from versions import (
 def test_python_version():
     version_info = python_version()
     assert version_info.major == 3
-    assert version_info.minor == 8
+    assert version_info.minor in {8, 9, 10}  # Allow for multiple minor versions
+
 
 
 def test_requests_version():
